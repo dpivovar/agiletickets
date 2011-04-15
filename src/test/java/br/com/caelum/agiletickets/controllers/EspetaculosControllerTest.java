@@ -101,7 +101,7 @@ public class EspetaculosControllerTest {
 	@Test
 	public void deveReservarSeASessaoTemIngressosSuficientes() throws Exception {
 		Sessao sessao = new Sessao();
-		sessao.setTotalIngressos(1);
+		sessao.setTotalIngressos(5);
 
 		when(agenda.sessao(1234l)).thenReturn(sessao);
 
