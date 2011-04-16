@@ -102,6 +102,10 @@ public class Sessao {
 	}
 
 	public BigDecimal getPreco() {
-		return preco;
+		return this.getPreco(TABELA.NORMAL);
+	}
+
+	public BigDecimal getPreco(TABELA tabela) {
+		return this.preco.subtract((this.preco.multiply(new BigDecimal(tabela.getDesconto())).divide(new BigDecimal(100.0))));
 	}
 }

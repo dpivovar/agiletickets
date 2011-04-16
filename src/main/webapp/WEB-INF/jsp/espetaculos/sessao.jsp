@@ -17,11 +17,12 @@
 		<p><span class="label">Ingressos disponíveis:</span> ${sessao.ingressosDisponiveis }</p>
 		<c:if test="${sessao.ingressosDisponiveis gt 0}">
 			<form action="/sessao/${sessao.id}/reserva" method="post">
+				<p><span class="label">Idoso ou Esudante:</span> <input type="checkbox" name="idoso" id="idoso" value="true"/></p>
 				<h3>Reservar ingresso</h3>
 				<label for="qtde">Quantidade</label>
-				<input id="qtde" name="quantidade"/>
+				<input id="quantidade" name="quantidade"/>
 				
-				<input type="submit" value="Reservar"/>
+				<input type="submit" value="Reservar" id="reservar"/>
 			</form>
 		</c:if>
 	</body>
